@@ -1,0 +1,331 @@
+/* Default Typography and Body Setup */
+body {
+    margin: 0; /* Reset margins */
+    padding: 0;
+    font-family: "Sofia Sans", sans-serif;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    color: rgb(43, 43, 43); /* Default text color */
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Main Container to Centralize Content */
+.container {
+    width: 80%; /* Default width of the content area */
+    max-width: 800px; /* Maximum width */
+    margin: 0 auto; /* Center the container */
+    padding: 30px 0; /* Top and bottom padding */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Owner Name Section */
+#name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.owner-name {
+    font-size: 2.5rem; /* 30% larger than original */
+    font-weight: 250;
+    text-align: center;
+}
+
+/* Description Styling */
+#owner-description {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 5vh 0; /* Margin for breathing space */
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Header Layout */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    position: relative;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 2rem;
+    transition: all 0.1s;
+    color: rgb(43, 43, 43);
+}
+
+.design-link, .artwork-link {
+    border: 3px solid rgb(43, 43, 43);
+    padding: 0 2vw;
+    text-align: center;
+}
+
+.artwork-link {
+    border-radius: 1000px;
+}
+
+.line {
+    display: inline-block;
+    width: 8vw;
+    height: 3px;
+    background-color: rgb(43, 43, 43);
+}
+
+/* Header Links Hover */
+header nav ul li a:hover {
+    background-color: rgb(43, 43, 43);
+    color: #d2d2d2;
+}
+
+/* Download Resume Section */
+#resume {
+    text-align: center;
+    margin-top: 0;
+    opacity: 1;
+    font-weight: 250;
+    transition: all 0.3s;
+}
+
+#resume a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: rgb(43, 43, 43);
+}
+
+#resume:hover {
+    font-weight: 1000;
+}
+
+/* Social Media Icons */
+#social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#social-media ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#social-media ul li {
+    margin: 0 10px;
+}
+
+#social-media ul li a {
+    text-decoration: none;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    color: rgb(43, 43, 43);
+    padding: 3px;
+    transition: all 0.2s ease-in-out;
+}
+
+#social-media ul li a:hover {
+    background-color: rgb(43, 43, 43);
+    color: #ffffff;
+    padding: 3px;
+}
+
+/* Popup Box Styling */
+.popup-box {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    height: 70vh;
+    background-color: #fff;
+    box-shadow: 0px 0px 44px -11px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 20px;
+}
+
+.popup-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(43, 43, 43);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+    color: rgb(43, 43, 43);
+    font-weight: 300;
+}
+
+.close-button:hover {
+    font-weight: 1000;
+}
+
+/* Grain Effect */
+.grainy {
+    height: 0;
+    background-image: url("graintxt.jpg");
+    z-index: -10;
+}
+
+.grainy:after {
+    animation: grain 5s steps(10) infinite;
+    background-image: url("graintxt.png");
+    content: "";
+    height: 280%;
+    left: -50%;
+    opacity: 0.3;
+    position: fixed;
+    top: -100%;
+    width: 300%;
+}
+
+@keyframes grain {
+    0%, 100% { transform:translate(0, 0) }
+    10% { transform:translate(-5%, -10%) }
+    20% { transform:translate(-15%, 5%) }
+    30% { transform:translate(7%, -25%) }
+    40% { transform:translate(-5%, 25%) }
+    50% { transform:translate(-15%, 10%) }
+    60% { transform:translate(15%, 0%) }
+    70% { transform:translate(0%, 15%) }
+    80% { transform:translate(3%, 35%) }
+    90% { transform:translate(-10%, 10%) }
+}
+
+/* Back Button */
+#back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#back-button a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: rgb(43, 43, 43);
+    transition: all 0.3s ease;
+}
+
+#back-button a:hover {
+    font-weight: 1000;
+}
+
+/* Description Text */
+.description {
+    font-size: 1.2rem;
+    color: rgb(43, 43, 43);
+    font-weight: 300;
+    padding-top: 25px;
+    text-align: justify;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+
+    header nav ul li a {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .owner-name {
+        font-size: 2rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .line {
+        width: 3px;
+        height: 50px;
+    }
+
+    .design-link, .artwork-link {
+        padding: 0 4vw;
+    }
+
+    #resume a {
+        font-size: 1.2rem;
+    }
+
+    #social-media ul li {
+        margin: 5px;
+    }
+
+    .close-button {
+        font-size: 1.5rem;
+    }
+
+    #owner-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .owner-name {
+        font-size: 1.5rem;
+    }
+
+    header nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    .design-link, .artwork-link {
+        padding: 0 2vw;
+    }
+
+    #resume a {
+        font-size: 1rem;
+    }
+
+    #back-button a {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}
